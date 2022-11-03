@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from . import views
+from keloksiBuku import views as koleksiViews
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('koleksi/', koleksiViews.koleksi),
+    path('', views.index),
+
 ]
